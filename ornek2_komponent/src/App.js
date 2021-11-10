@@ -1,13 +1,13 @@
-import Selamla from "./Selamla";
+import Selamla from "./Selamla.js";
 
 function App() {
   return (
     <div className="App">
-      <h1>HELLO REACT</h1>
-      <p>React UI gelistirmek icin kullanilan bir javascript kutuphanesidr.</p>
+      <h1>Hello React</h1>
+      <p>React UI geliştirmek için kullanilan bir javascript kütüphanesidir</p>
+
       <Selamla />
     </div>
   );
 }
-
 export default App;
