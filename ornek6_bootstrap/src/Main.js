@@ -1,16 +1,16 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import data from "./data.js";
+import { Card, Button, Container, Row, Col } from "react-bootstrap";
 
-function Kart() {
+function Kart(props) {
+  const { text, name, img } = data[props.id];
   return (
     <div>
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Img variant="top" src={img} />
         <Card.Body>
-          <Card.Title>REACT</Card.Title>
-          <Card.Text>
-            React kursumuzda A'dan Z'ye herseyi goreceksiniz
-          </Card.Text>
+          <Card.Title>{name}</Card.Title>
+          <Card.Text>{text}</Card.Text>
           <Button variant="danger">DETAYLAR</Button>
         </Card.Body>
       </Card>
@@ -21,9 +21,34 @@ function Kart() {
 function Main() {
   return (
     <div>
-      <Kart />
-      <Kart />
-      <Kart />
+      <Container className="text-center  mt-4">
+        <Row className="d-flex justify-content-center">
+          <Col
+            className="mb-3 d-flex justify-content-center"
+            xs={12}
+            md={6}
+            lg={4}
+          >
+            <Kart id="0" />
+          </Col>
+          <Col
+            className="mb-3 d-flex justify-content-center"
+            xs={12}
+            md={6}
+            lg={4}
+          >
+            <Kart id="1" />
+          </Col>
+          <Col
+            className="mb-3 d-flex justify-content-center"
+            xs={12}
+            md={6}
+            lg={4}
+          >
+            <Kart id="2" />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

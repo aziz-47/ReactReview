@@ -8,7 +8,7 @@ import {
   Button,
   Container,
 } from "react-bootstrap";
-import logo from "./img/logo-4.png";
+import logo from "./img/logo.png";
 //! Local resimleri gosterebilmek icin import yontemiyle elklemek gerekiyor. Akdi halde resimler gozukmuyor.
 
 function MyNav() {
