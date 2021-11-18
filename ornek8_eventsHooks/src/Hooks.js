@@ -17,16 +17,34 @@ import { useState } from "react";
 //* =========================================================================
 
 function Hooks() {
+  //* - useState hook'u en yaygin kullanilan hook'lardandir.
+  //* - Bir degisken, dizi ya da nesneye state atayabilmemize olanak saglar.
+  //* - 2 donus degeri vardir. 1.si state'i tutan degisken, 2. ise state'i
+  //*   degistirmeye yarayan bir (setter) fonksiyondur.
+
+  //* - Array destructring ile useState'in dondurdukeri ayrıstiriliyor.
+  //* - sayac'a (state) baslangicte 0 degeri ataniyor.
+
   const [sayac, setSayac] = useState(0);
+  const sn = setInterval(arttir, 1000);
 
-  function arttir() {}
+  function arttir() {
+    setSayac(sayac + 1);
+    clearInterval(sn);
+  }
 
-  function azalt() {}
+  function azalt() {
+    setSayac(sayac - 1);
+    clearInterval(sn);
+  }
 
-  function sifirla() {}
+  function sifirla() {
+    setSayac(0);
+    clearInterval(sn);
+  }
   return (
     <div className="container text-center mt-4">
-      {/* <h1>Sayac:{sayac}</h1> */}
+      <h1>Sayac:{sayac}</h1>
       <button className="btn btn-outline-danger" onClick={arttir}>
         Arttir
       </button>

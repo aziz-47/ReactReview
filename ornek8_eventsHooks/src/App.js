@@ -1,6 +1,7 @@
 import ClassComponent from "./ClassComponent";
 import Events from "./Events";
 import Hooks from "./Hooks";
+import HookOrnek from "./HookOrnek";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <ClassComponent sayi="10" />
       <ClassComponent sayi="100" />
       <Hooks />
+      <HookOrnek />
     </div>
   );
 }
