@@ -3,17 +3,17 @@ import data from "./data";
 import Liste from "./Liste";
 
 function App() {
-  const [kisiler, SetKisiler] = useState(data);
+  const [kisiler, setKisiler] = useState(data);
   function temizle() {
-    SetKisiler([]);
+    setKisiler([]);
   }
-
   return (
     <main>
-      <section className="container"></section>
-      <h2>Bugun {kisiler.length} dogum gunu bulunmaktadir.</h2>
-      <Liste kisiler={kisiler} />
-      <button onClick={temizle}>TEMIZLE</button>
+      <section className="container">
+        <h3>Bugun {kisiler.length} dogum gunu bulunmaktadir.</h3>
+        <Liste kisi={kisiler} />
+        <button onClick={temizle}>Temizle</button>
+      </section>
     </main>
   );
 }

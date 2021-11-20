@@ -1,18 +1,18 @@
 import React from "react";
 
 function Liste(props) {
-  const { kisiler } = props;
-
-  // const { isim, yas, resim } = kisiler[0];
-
+  const { kisi } = props;
   return (
     <div>
-      {kisiler.map((k) => {
-        const { isim, resim, yas } = k;
+      {kisi.map((k) => {
+        const { id, isim, resim, yas } = k;
         return (
-          <div>
-            <img src={resim} alt="" />;<h2>{isim}</h2>
-            <h2>{yas}</h2>
+          <div className="kisi" key={id}>
+            <img src={resim} alt="" />
+            <div>
+              <h4>{isim}</h4>
+              <p>{yas} Yasinda</p>
+            </div>
           </div>
         );
       })}
