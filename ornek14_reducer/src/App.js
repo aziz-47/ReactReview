@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import ReducerOrnek from "./ReducerOrnek";
 
 
 function App() {
@@ -6,9 +7,9 @@ function App() {
   return (
     
       
-        <header>
-          <h1>Merhaba!</h1>
-        </header>
+        <div>
+          <ReducerOrnek/>
+        </div>
        
   
   );
